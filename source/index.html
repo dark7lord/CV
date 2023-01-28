@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/uzumaki.svg" type="image/svg">
+  <script src="index.js"></script>
+  <title>CV</title>
+</head>
+
+
+<body class="body">
+  <header class="body__header header">
+    <nav class="header__nav nav">
+      <ul>
+        <li>
+          <a href="#contacs">
+            <span data-hover="Contacts">Contacts</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about-me">
+            <span data-hover="About me">About me</span>
+          </a>
+        </li>
+        <li>
+          <a href="#stack">
+            <span data-hover="Stack">Stack</span>
+          </a>
+        </li>
+        <li>
+          <a href="#example-code">
+            <span data-hover="Example code">Example code</span>
+          </a>
+        </li>
+        <li>
+          <a href="#work-experience">
+            <span data-hover="Work experience">Work experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#education">
+            <span data-hover="Education">Education</span>
+          </a>
+        </li>
+        <li>
+          <a href="#languages">
+            <span data-hover="Languages">Languages</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="body__main">
+    <section class="grid">
+      <h1 class="grid__name">
+        Валерий Гайсин.
+        <span>Frontend developer</span>
+      </h1>
+      <!-- <img class="grid__avatar" src="images/photo.jpeg" alt="avatar" width="100" height="100"> -->
+      <img class="grid__avatar" src="images/photo_re.jpeg" alt="avatar" width="100" height="100">
+      <div class="grid__contacts contacts">
+        <ul>
+          <li>
+            <svg width="20" height="20">
+              <use href="images/sprite.svg#icon_email"></use>
+            </svg>
+            <a href="mailto:dark7lord@yandex.ru">dark7lord@yandex.ru</a>
+          </li>
+          <li>
+            <svg width="20" height="20">
+              <use href="images/sprite.svg#icon_github"></use>
+            </svg>
+            <a href="https://github.com/dark7lord">github.com/dark7lord</a>
+          </li>
+          <li>
+            <svg width="20" height="20">
+              <use href="images/sprite.svg#icon_phone"></use>
+            </svg>
+            <a href="tel:+79328654991">+7 9328654991</a>
+          </li>
+          <li>
+            <svg width="20" height="20">
+              <use href="images/sprite.svg#icon_map"></use>
+            </svg>
+            <a
+              href="https://yandex.ru/maps/43/kazan/house/peterburgskaya_ulitsa_35/YEAYdwVpQEMPQFtvfXt5cn5iYQ==/?indoorLevel=1&ll=49.129968%2C55.783215&z=16">Казань,
+              готов к переезду</a>
+          </li>
+        </ul>
+      </div>
+      <div class="grid__education education">
+        <h3>Education</h3>
+        <p class="education__university">Оренбургский Государственный Аграрный Университет</p>
+        <p class="education__speciality">
+          Информатика и вычислительная техника
+          <u>Бакалавр (2019)</u>
+        </p>
+      </div>
+      <div class="grid__skills skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>
+            HTML & CSS
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            JavaScript (ES6)
+            <span class="skills__level">3/<sub>5</sub></span>
+          </li>
+          <li>
+            Less / SCSS
+            <span class="skills__level">4/<sub>5</sub></span>
+          </li>
+          <li>
+            Git & Github
+            <span class="skills__level">4/<sub>5</sub></span>
+          </li>
+          <li>
+            Node.js & npm
+            <span class="skills__level">2/<sub>5</sub></span>
+          </li>
+          <li>
+            Gulp
+            <span class="skills__level">4/<sub>5</sub></span>
+          </li>
+          <li>
+            Figma
+            <span class="skills__level">3/<sub>5</sub></span>
+          </li>
+          <li>
+            SVG sprites
+            <span class="skills__level">4/<sub>5</sub></span>
+          </li>
+          <li>
+            Adaptive
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            Responsive
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            Retina
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            БЭМ
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            Pixel Perfect
+            <span class="skills__level">5/<sub>5</sub></span>
+          </li>
+          <li>
+            C/C++
+            <span class="skills__level">3/<sub>5</sub></span>
+          </li>
+          <li>
+            Makefile
+            <span class="skills__level">4/<sub>5</sub></span>
+          </li>
+          <li>
+            Docker
+            <span class="skills__level">2/<sub>5</sub></span>
+          </li>
+          <li>
+            Python
+            <span class="skills__level">2/<sub>5</sub></span>
+          </li>
+          <li>
+            Shell: bash, zsh
+            <span class="skills__level">3/<sub>5</sub></span>
+          </li>
+        </ul>
+      </div>
+      <div class="grid__profile profile">
+        <h3>Profile</h3>
+        <p>
+          Прошёл 6-месячный онлайн-курс от HTML Academy на специальность Frontend-разработчик (Май 2020 — Ноябрь
+          2020).Проекты на курсах - прохождение и обучение по предоставленным макетам, по которым получается качественно
+          сверстанный макет (который также правится после код-ревью наставника).
+        </p>
+        <p>
+          В данный момент учусь в Школе 21 от Сбера, где погружен в программирование слишком глубоко (только С, только
+          хардкор (потом С++ и другие языки, а также различные концепции программирования как структуры данных,
+          многопоточность, системные вызовы и т.д.).
+        </p>
+        <p>
+          Интересна веб-разработка и бэкенд (Node.js, Python).
+        </p>
+      </div>
+      <div class="grid__experience experience">
+        <h3>Professional experience</h3>
+        <h4>Акселлератор от HTML Academy</h4>
+        <p>
+          Эмуляция коммерческой работы, где необходимо учиться взаимодействовать с менеджером, тестировщиком,
+          наставником и сверстать проект по ТЗ (к примеру, взаймдействие через Slack и общую таблицу проекта в Google
+          Sheets, где фиксировались результаты и время работы над проектом (использовался Toggl Track).
+        </p>
+      </div>
+      <div class="grid__projects projects">
+        <h3>My personal projects</h3>
+        <ul class="projects__list">
+          <li class="project sites">
+            <h4>Sites</h4>
+            <ul>
+              <li><a href="https://dark7lord.github.io/adaptive-sedona/index.html">Sedona</a></li>
+              <li><a href="https://dark7lord2012.github.io/Smart-Device/">Smart Device</a></li>
+              <li><a href="https://dark7lord2012.github.io/Bicycles/">Bicycles</a></li>
+              <li><a href="https://dark7lord.github.io/Plants/plants/">Plants</a></li>
+              <li><a href="https://dark7lord.github.io/nerds/index.html">Nerds</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <h4>
+              <a href="https://github.com/dark7lord/minishell">
+                MiniShell
+              </a>
+              (School 21)
+            </h4>
+            <p>
+              Проект написан в рамках обучения "Школы 21" в группе из двух человек (взаимодействие через Github). Собственная и упрощенная реализация командной оболочки, оригинальный bash использовался в качестве эталона. Реализовано на языке С
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="grid__qr qr">
+        <img src="images/qr.png" alt="qr-code: t.me/dark7lord" width="100" height="100">
+      </div> -->
+    </section>
+  </main>
+
+  <footer class="body__footer footer">
+
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.header {
+  background-color: ghostwhite;
+}
+
+.nav {
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  color: black;
+  overflow: hidden;
+}
+
+.nav a span {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  transition: transform 0.3s;
+}
+
+.nav a span::before {
+  position: absolute;
+  top: 100%;
+  font-weight: 700;
+  letter-spacing: 0;
+  transform: translate3d(0, 0, 0);
+  content: attr(data-hover);
+}
+
+.nav a:hover span {
+  transform: translateY(-100%);
+}
+
+.nav a:hover span::before{
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}

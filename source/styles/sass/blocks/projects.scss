@@ -1,0 +1,24 @@
+.projects {
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.projects__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project {
+  h4 {
+    margin-top: 0;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:focus {
+    color: red;
+  }
+}

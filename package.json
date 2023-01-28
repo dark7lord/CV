@@ -1,0 +1,36 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "My personal resume",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dark7lord/CV.git"
+  },
+  "keywords": [
+    "cv",
+    "resume"
+  ],
+  "author": "dark7lord",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dark7lord/CV/issues"
+  },
+  "homepage": "https://github.com/dark7lord/CV#readme",
+  "devDependencies": {
+    "@babel/preset-env": "7.20.2",
+    "browser-sync": "2.27.11",
+    "gulp": "4.0.2",
+    "gulp-babel": "8.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "9.0.0",
+    "sass": "1.57.1"
+  }
+}

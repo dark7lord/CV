@@ -1,0 +1,49 @@
+.skills {
+  ul {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: relative;
+      left: -10px;
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: black;
+      border-radius: 5px;
+      transition: color 0.3s;
+    }
+  }
+
+  li + li {
+    margin-top: 5px;
+  }
+
+  li:hover {
+    &::before {
+      background-color: red;
+      transition: 0.3s;
+    }
+  }
+}
+
+.skills__level {
+  display: inline-flex;
+  align-items: flex-end;
+  color: black;
+  text-decoration: dashed;
+  margin-left: auto;
+  padding: 0 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+
+  sub {
+    color: grey;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  // min-height: 100vw;
+  font-family: "Inter", "Arial", sans-serif;
+
+  .body__main {
+    flex-grow: 1;
+  }
+
+  ::selection,
+  ::-moz-selection {
+    color: white;
+    background-color: rgba(red, 0.7);
+  }
+}

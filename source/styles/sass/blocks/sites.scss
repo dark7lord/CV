@@ -1,0 +1,33 @@
+.sites {
+  ul {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      a {
+        border: 1px solid red;
+        border-radius: 5px;
+        min-width: 120px;
+        padding: 10px;
+        color: black;
+
+        &:hover,
+        &:focus {
+          color: white;
+          background-color: red;
+          transition: color 0.3s;
+        }
+      }
+    }
+  }
+}

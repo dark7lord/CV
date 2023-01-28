@@ -1,0 +1,33 @@
+.contacts {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      display: inline-flex;
+      padding: 5px 0;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: red;
+      transition: color 0.3s;
+    }
+  }
+}
+

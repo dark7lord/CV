@@ -1,0 +1,118 @@
+@media print {
+  .header {
+    display: none;
+  }
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  grid-template-areas:
+    "avatar name"
+    "avatar contacts"
+    "skills profile"
+    "skills experience"
+    "education projects";
+    // "education qr";
+  // A4
+  width: 210mm;
+  max-height: 295mm;
+  gap: 20px 40px;
+  border: 1px solid black;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+  grid-auto-rows: min-content;
+  border-radius: 3px;
+  background-color: rgba(white, 0.75);
+
+  // background-image: url("images/top-view-cup-of-coffee-with-copy-space_23-2148336756.webp");
+  &::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    inset: 0;
+    // background-image: url("images/geisha.jpeg");
+    background-image: url("images/geisha2.jpeg");
+    // background-image: url("images/inoichi.jpeg");
+    // background-image: url("images/coffee.webp");
+    // background-image: url("images/china_paint-4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+  }
+
+  .grid__name {
+    display: flex;
+    align-items: baseline;
+    align-self: center;
+    padding-bottom: 5px;
+    margin: 0;
+    grid-area: name;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+
+    span {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 10px;
+      font-size: 75%;
+      font-weight: 300;
+
+      &::after {
+        display: flex;
+        content: "";
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        background-image: url("images/uzumaki.svg");
+      }
+    }
+  }
+  .grid__speciality {
+    align-self: start;
+    margin: 0;
+    grid-area: speciality;
+  }
+  .grid__avatar {
+    grid-area: avatar;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .grid__education {
+    grid-area: education;
+  }
+  .grid__experience {
+    grid-area: experience;
+  }
+  .grid__skills {
+    grid-area: skills;
+  }
+  .grid__projects {
+    grid-area: projects;
+  }
+  .grid__qr {
+    grid-area: qr;
+    align-self: end;
+    justify-self: end;
+  }
+  .grid__contacts {
+    grid-area: contacts;
+  }
+  .grid__profile {
+    grid-area: profile;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: "Inika", "Georgia", serif;
+    font-weight: 600;
+  }
+}
