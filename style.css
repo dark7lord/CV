@@ -1,0 +1,419 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Inika";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inika"), url("../fonts/Inika-Regular.woff2") format("woff2"), url("../fonts/Inika-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Inika";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inika"), url("../fonts/Inika-Bold.woff2") format("woff2"), url("../fonts/Inika-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inter"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inter"), url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inter"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", "Arial", sans-serif;
+}
+.body .body__main {
+  flex-grow: 1;
+}
+.body ::selection,
+.body ::-moz-selection {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.header {
+  background-color: ghostwhite;
+}
+
+.nav {
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  color: black;
+  overflow: hidden;
+}
+
+.nav a span {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  transition: transform 0.3s;
+}
+
+.nav a span::before {
+  position: absolute;
+  top: 100%;
+  font-weight: 700;
+  letter-spacing: 0;
+  transform: translate3d(0, 0, 0);
+  content: attr(data-hover);
+}
+
+.nav a:hover span {
+  transform: translateY(-100%);
+}
+
+.nav a:hover span::before {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+}
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  align-items: stretch;
+  grid-template-areas: "avatar   name" "avatar   contacts" "skills   profile" "skills   experience" "projects experience" "projects education" ". education";
+  align-content: stretch;
+  align-items: center;
+  width: 210mm;
+  max-height: 295mm;
+  height: 295mm;
+  gap: 20px 30px;
+  border: 1px solid lightgray;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.grid > div {
+  max-width: 100%; /* Максимальная ширина для элемента */
+  max-height: 100%; /* Максимальная высота для элемента */
+  height: fit-content;
+  flex-grow: 0;
+  flex-shrink: 1;
+  border-radius: 5px;
+  align-self: start;
+}
+.grid::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url("images/notgeisha2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+}
+.grid .grid__name {
+  display: flex;
+  align-items: baseline;
+  align-self: center;
+  padding-bottom: 5px;
+  margin: 0;
+  grid-area: name;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+}
+.grid .grid__name span {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 75%;
+  font-weight: 300;
+}
+.grid .grid__name span::after {
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  background-image: url("images/uzumaki.svg");
+}
+.grid .grid__speciality {
+  align-self: start;
+  margin: 0;
+  grid-area: speciality;
+}
+.grid .grid__avatar {
+  grid-area: avatar;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+.grid .grid__education {
+  grid-area: education;
+}
+.grid .grid__experience {
+  grid-area: experience;
+}
+.grid .grid__skills {
+  grid-area: skills;
+}
+.grid .grid__projects {
+  margin-top: auto;
+  grid-area: projects;
+  grid-row-end: -1;
+}
+.grid .grid__contacts {
+  grid-area: contacts;
+}
+.grid .grid__profile {
+  grid-area: profile;
+}
+.grid h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Inika", "Georgia", serif;
+  font-weight: 600;
+}
+
+.profile p:first-of-type {
+  margin-top: 0;
+}
+.profile p:last-of-type {
+  margin-bottom: 0;
+}
+
+.skills ul {
+  margin: 0 0 20px;
+  padding-left: 10px;
+}
+.skills li {
+  display: flex;
+  align-items: center;
+}
+.skills li::before {
+  position: relative;
+  left: -10px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+  transition: color 0.3s;
+}
+.skills li + li {
+  margin-top: 5px;
+}
+.skills li:hover::before {
+  background-color: red;
+  transition: 0.3s;
+}
+
+.contacts ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.contacts ul li {
+  display: inline-flex;
+  padding: 5px 0;
+}
+.contacts ul svg {
+  margin-right: 10px;
+}
+.contacts a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.3s;
+}
+.contacts a:hover, .contacts a:focus {
+  color: red;
+  transition: color 0.3s;
+}
+
+.education {
+  font-weight: 400;
+}
+
+.education__university {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.education__speciality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.education__speciality span {
+  color: black;
+}
+
+.experience {
+  overflow: hidden;
+}
+.experience h3, .experience h5 {
+  font-family: "Inika";
+}
+.experience h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.experience h3 > span {
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: smaller;
+}
+.experience h4 {
+  margin: 2px 0 1rem;
+  font-weight: 500;
+}
+.experience h5 {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  column-gap: 4px;
+  font-size: 1rem;
+}
+.experience h5 > span {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: smaller;
+}
+.experience h5 a {
+  color: black;
+}
+.experience h5 a:hover, .experience h5 a:focus {
+  color: blue;
+}
+.experience p {
+  margin-top: 0;
+}
+.experience ul {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+.experience li + li {
+  margin: 0.5rem 0;
+}
+
+.experience__project + .experience__project {
+  margin-top: 8px;
+}
+
+.projects h3 {
+  margin-top: 0;
+}
+
+.projects__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.projects__list > li {
+  display: flex;
+  align-items: center;
+}
+.projects__list a {
+  margin-left: 0.5rem;
+  color: black;
+}
+.projects__list a:hover, .projects__list a:focus {
+  color: blue;
+}
+
+.project h4 {
+  margin-top: 0;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.project a:hover,
+.project a:focus {
+  color: red;
+}
+
+.sites ul {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sites ul li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sites ul li a {
+  border: 1px solid red;
+  border-radius: 5px;
+  min-width: 120px;
+  padding: 10px;
+  color: black;
+}
+.sites ul li a:hover, .sites ul li a:focus {
+  color: white;
+  background-color: red;
+  transition: color 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
