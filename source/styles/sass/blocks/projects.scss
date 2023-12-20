@@ -1,4 +1,5 @@
 .projects {
+
   h3 {
     margin-top: 0;
   }
@@ -8,6 +9,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	& > li {
+		display: flex;
+		align-items: center;
+	}
+
+	a {
+		margin-left: 0.5rem;
+		color: black;
+
+		&:hover,
+		&:focus {
+			color: blue;
+		}
+	}
 }
 
 .project {

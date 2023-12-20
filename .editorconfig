@@ -4,13 +4,13 @@ root = true
 
 [*]
 charset = utf-8
-indent_style = space
+indent_style = tab
 indent_size = 2
 end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{go,py,rb,php}]
+[*.{py,rb}]
 indent_size = 4
 
 [*.md]
