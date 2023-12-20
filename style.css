@@ -147,10 +147,11 @@
   content: "";
   inset: 0;
   background-image: url("images/notgeisha2.jpeg");
+  background-image: url("images/inoichi.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: blur(4px);
+  filter: blur(10px);
 }
 .grid .grid__name {
   display: flex;
@@ -189,7 +190,6 @@
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  filter: blur(2px);
 }
 .grid .grid__education {
   grid-area: education;
