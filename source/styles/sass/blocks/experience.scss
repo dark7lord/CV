@@ -1,13 +1,74 @@
 .experience {
-  h4 {
+	overflow: hidden;
+	
+
+	h3, h5 {
+		font-family: 'Inika', ;
+	}
+  h3 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
     margin-top: 0;
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 0.9em;
-    text-decoration: underline;
+    font-weight: 600;
+    // font-size: 0.9em;
+    // text-decoration: underline;
+
+		& > span {
+			text-decoration: none;
+			font-weight: 500;;
+			font-family: 'Inter', sans-serif;
+			font-size: smaller;
+		}
+
   }
+
+
+	h4 {
+		margin: 2px 0 1rem;
+		font-weight: 500;
+	}
+
+	h5 {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+		margin-bottom: 8px;
+		column-gap: 4px;
+		font-size: 1rem;
+
+		& > span {
+			font-weight: 500;
+			font-family: 'Inter', sans-serif;
+			font-size: smaller;
+		}
+
+		a {
+			color: black;
+
+			&:hover,
+			&:focus {
+				color: blue;
+			}
+		}
+	}
 
   p {
     margin-top: 0;
   }
+
+	ul {
+		margin: 1rem 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li + li {
+		margin: 0.5rem 0;
+	}
+}
+
+.experience__project + .experience__project {
+	margin-top: 8px;
 }

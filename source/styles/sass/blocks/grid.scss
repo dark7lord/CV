@@ -8,41 +8,63 @@
   position: relative;
   display: grid;
   grid-template-columns: 190px 1fr;
+	align-items: stretch;
   grid-template-areas:
-    "avatar name"
-    "avatar contacts"
-    "skills profile"
-    "skills experience"
-    "education projects";
+    "avatar   name"
+    "avatar   contacts"
+    "skills   profile"
+    "skills   experience"
+    "projects experience"
+    "projects education"
+    ". education"
     // "education qr";
-  // A4
-  width: 210mm;
-  max-height: 295mm;
-  gap: 20px 40px;
-  border: 1px solid black;
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 30px;
-  box-sizing: border-box;
-  grid-auto-rows: min-content;
-  border-radius: 3px;
-  background-color: rgba(white, 0.75);
+		;
+		// A4
+	// grid-auto-rows: minmax(auto, auto); /* Настройка высоты строк */
+	align-content: stretch;
+	align-items: center;
 
-  // background-image: url("images/top-view-cup-of-coffee-with-copy-space_23-2148336756.webp");
+	width: 210mm;
+	max-height: 295mm;
+	height: 295mm;
+	gap: 20px 30px;
+	border: 1px solid lightgray;
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 50px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	background-color: rgba(white, 0.75);
+
+		& > div {
+			// padding: 12px;
+			// outline: 1px solid blue;
+			max-width: 100%; /* Максимальная ширина для элемента */
+			max-height: 100%; /* Максимальная высота для элемента */
+			height: fit-content;
+			flex-grow: 0;
+			flex-shrink: 1;
+			border-radius: 5px;
+			align-self: start;
+	}
+
   &::after {
     z-index: -1;
     position: absolute;
     content: "";
     inset: 0;
     // background-image: url("images/geisha.jpeg");
-    background-image: url("images/geisha2.jpeg");
-    // background-image: url("images/inoichi.jpeg");
+    // background-image: url("images/geisha2.jpeg");
+    // background-image: url("images/geisha4.jpeg");
+    // background-image: url("images/notgeisha.jpeg");
+    background-image: url("images/notgeisha2.jpeg");
+    background-image: url("images/inoichi.jpeg");
     // background-image: url("images/coffee.webp");
     // background-image: url("images/china_paint-4.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(4px);
+    filter: blur(10px);
   }
 
   .grid__name {
@@ -84,6 +106,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
+		// filter: blur(2px);
   }
   .grid__education {
     grid-area: education;
@@ -95,13 +118,15 @@
     grid-area: skills;
   }
   .grid__projects {
+		margin-top: auto;
     grid-area: projects;
+		grid-row-end: -1;
   }
-  .grid__qr {
-    grid-area: qr;
-    align-self: end;
-    justify-self: end;
-  }
+  // .grid__qr {
+  //   grid-area: qr;
+  //   align-self: end;
+  //   justify-self: end;
+  // }
   .grid__contacts {
     grid-area: contacts;
   }
